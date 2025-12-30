@@ -1,0 +1,9 @@
+package ah.lada.lada
+
+class Greeting {
+    private val platform = getPlatform()
+
+    fun greet(): String {
+        return "Hello, ${platform.name}!"
+    }
+}
