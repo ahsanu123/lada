@@ -3,9 +3,8 @@
  */
 package org.example.app
 
-import org.example.utilities.StringUtils
-
 import org.apache.commons.text.WordUtils
+import org.example.utilities.StringUtils
 
 fun main() {
     val tokens = StringUtils.split(MessageUtils.getMessage())

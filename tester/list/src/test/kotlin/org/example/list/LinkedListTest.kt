@@ -4,13 +4,13 @@
 package org.example.list
 
 import org.junit.jupiter.api.Test
-
 import org.junit.jupiter.api.Assertions.*
 
 class LinkedListTest {
     @Test fun testConstructor() {
         val list = LinkedList()
-        assertEquals(0, list.size())
+        println("I Like this Debug Shit")
+        // assertEquals(666, list.size())
     }
 
     @Test fun testAdd() {

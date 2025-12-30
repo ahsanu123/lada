@@ -32,6 +32,10 @@ java {
 }
 
 tasks.named<Test>("test") {
+    testLogging.showStandardStreams = true
+
+    testLogging { events("PASSED", "SKIPPED", "FAILED", "STANDARD_OUT") }
+
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
 }
