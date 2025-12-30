@@ -13,6 +13,10 @@ several feature
 - this app will have some challenge for user to guess and type word of a sound
 - for EPIC 1 i dont care about user interface as long as it work, its ok, i will improve it on EPIC 2
 
+## Note 
+
+- use [alpha kotlin-lsp](https://github.com/Kotlin/kotlin-lsp) (its about 700Mb) instead [kotlin-language-server](https://github.com/fwcd/kotlin-language-server) alpha is working well compared to fwcd, to enable it use `vim.lsp.enable({"kotlin_lsp"})`
+
 ## References 
 
 - [wikdict dictionaries](https://download.wikdict.com/dictionaries/sqlite/2_2025-11/)
