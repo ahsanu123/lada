@@ -1,5 +1,13 @@
 default: 
   just -l
+  
+# assemble debug
+ad: 
+  gradle assembleDebug
+
+# assemble debug
+ar: 
+  gradle assembleRelease
 
 # task list
 tl: 
@@ -32,4 +40,4 @@ idc:
 
 # install debug
 id: 
-    gradle installDebug 
+  gradle installDebug 
