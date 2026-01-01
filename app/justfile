@@ -27,8 +27,8 @@ p address port pairCode:
   adb pair {{address}}:{{port}} {{pairCode}}
 
 # connect, usage: 192.168.1.7:40259
-c address:
-  adb connect {{address}}
+c address port:
+  adb connect {{address}}:{{port}}
 
 # list devices
 ld: 
