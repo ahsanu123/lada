@@ -11,8 +11,23 @@ import org.junit.Assert.*
  */
 class ExampleUnitTest {
   @Test
+  // @DisplayName("addition is fucking correct")
   fun addition_isCorrect() {
-    assertEquals(4, 2 + 22)
-    println("hello world")
+    println("before hello world")
+    assertEquals(4, 2 + 2)
+    println("success")
   }
+
+  @Test
+  // @DisplayName("addition is fucking correct")
+  fun justhello_isCorrect() {
+    println("just hello world")
+  }
+
+	// @DisplayName("A negative value for year is not supported by the leap year computation.")
+	// @ParameterizedTest(name = "For example, year {0} is not supported.")
+	// @ValueSource(ints = { -1, -4 })
+	// fun if_it_is_negative(year: int) {
+	// }
 }
+

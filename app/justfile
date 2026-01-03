@@ -1,5 +1,9 @@
 default: 
   just -l
+
+# run test 
+rt testClass:
+  gradle testDebugUnitTest --rerun-tasks --tests "*{{testClass}}"            
   
 # assemble debug
 ad: 
