@@ -9,11 +9,14 @@ import org.junit.Assert.*
  *
  * See [testing documentation](http://d.android.com/tools/testing).
  */
+data class User(val name: String, val age: Int)
+
 class ExampleUnitTest {
   @Test
   // @DisplayName("addition is fucking correct")
   fun addition_isCorrect() {
-    println("before hello world")
+    val u = User("Bob", 25)
+    println("$u before hello world")
     assertEquals(4, 2 + 2)
     println("success")
   }
