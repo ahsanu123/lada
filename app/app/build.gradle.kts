@@ -1,7 +1,10 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    kotlin("plugin.serialization") version "2.3.0"
 }
 
 android {
@@ -33,9 +36,27 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-    kotlinOptions {
-        jvmTarget = "11"
+    kotlin {
+        // note about this syntax
+        // this is called "lambda with receiver"
+        // its like "sugar" syntax for Action<T> in dotnet
+        // signature is T.() -> TRetVal
+        // then the caller function can use the "lambda"
+        // and apply it to T
+        // example:
+        // compilerOption( someAction: Option.() -> Unit) {
+        //  var defaultOption = Option.Default()
+        //  defaultOption.someAction() // <-- this will apply function to default option
+        //  // then use defaultOption
+        // }
+        //
+        // that is really same with Action<T> in dotnet
+        // but in different syntax
+        compilerOptions {
+            this.jvmTarget.set(JvmTarget.JVM_11)
+        }
     }
+
     buildFeatures {
         compose = true
     }
@@ -57,6 +78,7 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
+    implementation(libs.kotlinx.serialization)
 
     testImplementation(libs.junit)
 

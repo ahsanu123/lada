@@ -45,3 +45,7 @@ idc:
 # install debug
 id: 
   gradle installDebug 
+
+# gradle dependencies 
+gd: 
+  gradle dependencies

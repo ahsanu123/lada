@@ -1,7 +1,6 @@
 package ah.lada
 
 import org.junit.Test
-
 import org.junit.Assert.*
 
 /**
@@ -13,7 +12,6 @@ data class User(val name: String, val age: Int)
 
 class ExampleUnitTest {
   @Test
-  // @DisplayName("addition is fucking correct")
   fun addition_isCorrect() {
     val u = User("Bob", 25)
     println("$u before hello world")
@@ -22,15 +20,8 @@ class ExampleUnitTest {
   }
 
   @Test
-  // @DisplayName("addition is fucking correct")
   fun justhello_isCorrect() {
     println("just hello world")
   }
-
-	// @DisplayName("A negative value for year is not supported by the leap year computation.")
-	// @ParameterizedTest(name = "For example, year {0} is not supported.")
-	// @ValueSource(ints = { -1, -4 })
-	// fun if_it_is_negative(year: int) {
-	// }
 }
 
