@@ -18,10 +18,5 @@ class ExampleUnitTest {
     assertEquals(4, 2 + 2)
     println("success")
   }
-
-  @Test
-  fun justhello_isCorrect() {
-    println("just hello world")
-  }
 }
 

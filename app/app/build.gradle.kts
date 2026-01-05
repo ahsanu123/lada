@@ -80,6 +80,10 @@ dependencies {
     implementation(libs.androidx.compose.material3)
     implementation(libs.kotlinx.serialization)
 
+    // https://github.com/realm/realm-kotlin/tree/main?tab=readme-ov-file#installation
+    implementation("io.realm.kotlin:library-base:1.16.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.0")
+
     testImplementation(libs.junit)
 
     androidTestImplementation(libs.androidx.junit)
