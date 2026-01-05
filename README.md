@@ -1,4 +1,23 @@
-# 🧂 Lada 
+<p>
+  <a href="">
+    <img alt="npm version" src="https://badgen.net/github/commits/ahsanu123/lada/">
+  </a>
+  <a href="">
+    <img alt="npm" src="https://badgen.net/github/contributors/ahsanu123/lada/">
+  </a>
+  <a href="">
+    <img alt="npm" src="https://badgen.net/github/branches/ahsanu123/lada/">
+  </a>
+  <a href="https://github.com/ahsanu123/lada/blob/main/LICENSE">
+    <img alt="licence" src="https://badgen.net/github/license/ahsanu123/lada/">
+  </a>
+</p>
+
+<div align="center">
+  <img alt="logo" src="./app/app/src/main/res/mipmap-xxhdpi/ic_launcher.png">
+</div>
+
+# Lada
 
 Lada is challenge for 2026 to create android app with jetpack compose and kotlin, 
 several feature 
