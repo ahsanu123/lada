@@ -4,7 +4,12 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+
     kotlin("plugin.serialization") version "2.3.0"
+
+    id("kotlin-kapt")
+    id("com.google.devtools.ksp")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -33,8 +38,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlin {
         // note about this syntax
@@ -70,6 +75,35 @@ android {
 }
 
 dependencies {
+    val roomVersion = "2.8.4"
+    val hiltVersion = "2.57.2"
+    val navigationVersion = "2.9.6"
+    val hiltCompilerVersion = "1.3.0"
+
+    ksp("androidx.room:room-compiler:$roomVersion")
+    implementation("androidx.room:room-runtime:$roomVersion")
+    implementation("androidx.room:room-ktx:$roomVersion")
+
+    testImplementation("androidx.room:room-testing:$roomVersion")
+
+    //Hilt
+    implementation("com.google.dagger:hilt-android:$hiltVersion")
+    ksp("com.google.dagger:hilt-compiler:$hiltVersion")
+    ksp("androidx.hilt:hilt-compiler:$hiltCompilerVersion")
+
+    // Jetpack Compose integration
+    implementation("androidx.navigation:navigation-compose:$navigationVersion")
+
+    // Views/Fragments integration
+    implementation("androidx.navigation:navigation-fragment:$navigationVersion")
+    implementation("androidx.navigation:navigation-ui:$navigationVersion")
+
+    // Feature module support for Fragments
+    implementation("androidx.navigation:navigation-dynamic-features-fragment:$navigationVersion")
+
+    // Testing Navigation
+    androidTestImplementation("androidx.navigation:navigation-testing:$navigationVersion")
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -79,10 +113,6 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
     implementation(libs.kotlinx.serialization)
-
-    // https://github.com/realm/realm-kotlin/tree/main?tab=readme-ov-file#installation
-    implementation("io.realm.kotlin:library-base:1.16.0")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.0")
 
     testImplementation(libs.junit)
 

@@ -43,7 +43,7 @@ several feature
 - [android icon generator](https://romannurik.github.io/AndroidAssetStudio/icons-launcher.html#foreground.type=text&foreground.text.text=%F0%9F%A7%82&foreground.space.trim=1&foreground.space.pad=0.25&foreColor=rgba(96%2C%20125%2C%20139%2C%200)&backColor=rgb(20%2C%2086%2C%20139)&crop=0&backgroundShape=circle&effects=shadow&name=ic_launcher)
 - [wikdict dictionaries](https://download.wikdict.com/dictionaries/sqlite/2_2025-11/)
 - [nccn piper1 android](https://github.com/nihui/ncnn-android-piper.git)
-- [piper1 repo](https://github.com/OHF-Voice/piper1-gpl/tree/main)/
+- [piper1 repo](https://github.com/OHF-Voice/piper1-gpl/tree/main)
 - [NicosNicolaou16 SampleComposeWithHiltAndRoom](https://github.com/NicosNicolaou16/SampleComposeWithHiltAndRoom)
 
 <sub>❤️ work in progress, made with love by AH. Challenge for 2026 </sub>
