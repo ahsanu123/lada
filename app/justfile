@@ -49,3 +49,12 @@ id:
 # gradle dependencies 
 gd: 
   gradle dependencies
+
+# test on real device
+tod: 
+  gradle connectedAndroidTest
+
+# test on real device with fullPackageName
+todp fullPackageName: 
+  gradle connectedAndroidTest \
+    -Pandroid.testInstrumentationRunnerArguments.package="{{fullPackageName}}"
